@@ -10,7 +10,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--navy:#1a2744;--gold:#c9a84c;--gold-light:#e8c96a;--cream:#faf8f3;--text:#2d3748}
-body{font-family:'Inter',sans-serif;color:var(--text);background:#fff}
+body{font-family:'Inter',sans-serif;color:var(--text);background:#fff;padding-top:40px}
 
 /* HERO */
 .hero{position:relative;height:100vh;min-height:580px;background:var(--navy);display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -85,9 +85,11 @@ nav.scrolled{background:var(--navy);box-shadow:0 2px 20px rgba(0,0,0,0.3)}
 .contact-value a{color:var(--gold);text-decoration:none}
 
 /* BANNER */
-.banner{background:linear-gradient(135deg,var(--navy),#2c3e6e);padding:80px 24px;text-align:center;color:#fff}
-.banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.6rem);font-weight:600;margin-bottom:16px}
-.banner p{color:rgba(255,255,255,0.7);margin-bottom:32px;font-size:16px}
+#buy-banner{position:fixed;top:0;left:0;width:100%;background:#000;color:#fff;z-index:9999;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+#buy-banner p{font-size:14px;margin:0}
+#buy-banner a.stripe{background:#ff4d00;color:#fff;text-decoration:none;padding:8px 18px;border-radius:4px;font-size:13px;font-weight:500;white-space:nowrap;flex-shrink:0}
+@media(max-width:600px){#buy-banner .dt{display:none}}
+@media(min-width:601px){#buy-banner .mob{display:none}}
 
 /* FOOTER */
 footer{background:#111827;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
@@ -123,7 +125,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-uGP3LDgaHK-PgZIePTQixgTyqkGdPaiZZWumDPbQGrvIIylrfrEyyStnID0z06fEI3eYBBFqB-osWUPZPzPZmOzN8V4Hl2ZjExPG1oQi96NPvXYWNb-DQXgpKJ53GKK73e2nNAyRXoli3JtVBwOTTaUhz5lvuKz2oWKIFd3SlEl60Z30C20TWdxLzAo-wCwZBBPEnPL7G3Ixn3QwoX6yCwuzIQo5gsX-Sybc1zbx1qURfqZSdPzaDZvuIB3lGe4o_yctEvUM-wGYVjdw88U1go5_F0fLN9-fMr4pVNbIgpZg&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="TUTTOPRATICHEAUTO DI CIRIGLIANO PAOLA" style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
+  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-ss3YDxxHgNMyHFV9zHZpcUkIRVlumn4w1IkDQL6jnW4x0zHeU6tItDWP6hsmxxBDlUChvJkVXEynwyJb10hpRSBcCzfYJUCajnX8Dr5_njv53hSQC0oP1T2z44cnBDaGT8EIEAnbjHEJCynsNY3wOumHDjW_Cw6vLgwfnw12cdnlLsmbX_e5s3BCgPpthChFi0HMlEbgIVlP_MKSoYF768lsoKhkTLmhALH3ec39LdspRVhcTIZ1vcTGDaBaLmKuOrpP01lWaj8nG3GXkDz4znPn3FoIevdHG299KZ-7t--g&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="TUTTOPRATICHEAUTO DI CIRIGLIANO PAOLA" style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">Ufficio patenti · Bologna</div>
@@ -150,7 +152,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
         </div>
       </div>
       <div class="about-img">
-        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-uQs4NZklPLmZK_luzubtUtGD-cTzZevW_phR2CoS1s0l8OAiUIpoK5ZyoqtvE1jYiMKLHU2K-zeiI-kJzwYQiknSxQmTlaGwqL0o51TDHDktG4_AeMiCay4rSNdaQzmobX6MMpqyRgcFuOTs5yxTvTZvfggC5nN62SXdIF1zF0UHrr5KVkh4PSRAx9hNaezT5xjsIT931XbmPfun-Rec-a-WGNUonrd4zgIOgssjVdTnikUwqTUxQcPYE1V1WHiAk_nyf-Rgx7W0IpVtflLVczSAD3-fa6siH3tc81jbRonw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="TUTTOPRATICHEAUTO DI CIRIGLIANO PAOLA">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-vOVCXctOqgzpMa4NwSUT4oYalYqPLImV1eagShq8VBVYWrKNU9nF3dEZsj_Wrhk1fCiEnDH-zZNO5L86qXH1j6acvFLbh5fQV6W8be1fvUYRBrE45_zSAI89nK66H7nwxWc8tAHt5iJ_s1De7736cHXfXsvXIXBxzChkYplwxXhnc8GsRUy1UTbF9N5j81VAmgYBcRxVvnn4ybv1oYrOHiATDBwSqyhr6uIOl14antPt2AMwh1bGWB9CXLjXSuAbM04_9wf_DlbOK1_lgr97bJlmUbMUdYyoFo_Bdd6XOKPg&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="TUTTOPRATICHEAUTO DI CIRIGLIANO PAOLA">
       </div>
     </div>
   </div>
@@ -160,7 +162,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
   <div class="container">
     <h2 class="section-title">Servizi offerti</h2>
     <div class="services-grid"><div class="service-item"><div class="service-icon">⚖</div><span>Consulenza professionale</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Assistenza specializzata</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Supporto clienti</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Pratiche burocratiche</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Documentazione</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Follow-up</span></div></div>
-    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-uQs4NZklPLmZK_luzubtUtGD-cTzZevW_phR2CoS1s0l8OAiUIpoK5ZyoqtvE1jYiMKLHU2K-zeiI-kJzwYQiknSxQmTlaGwqL0o51TDHDktG4_AeMiCay4rSNdaQzmobX6MMpqyRgcFuOTs5yxTvTZvfggC5nN62SXdIF1zF0UHrr5KVkh4PSRAx9hNaezT5xjsIT931XbmPfun-Rec-a-WGNUonrd4zgIOgssjVdTnikUwqTUxQcPYE1V1WHiAk_nyf-Rgx7W0IpVtflLVczSAD3-fa6siH3tc81jbRonw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-vsNregeXDDQE0RYF8IOtvg_UeNeW2eQ-NCUA8HTthgNkXdb4QjqSnejHJDa8CMdJxkJWAN6DEDFAz8FVd1hZxcdaJXW3xexRu7Qu2ZrXmhc2N8FLkxJBRJ9ZMG_nyb5SXJM-4eKGGqA9L2PufPjcR3lKYYedc1CkeWZJwpjMTTbkaO8nHuPHqD3f0kd-Ulp0bhwY2F5GAZP4EKIGoQSBxpXQv5p-eBtzn0lEFtPpX59J2urfLaHb02BAEATaRQhcSQEAMy6Kbke1f4JbL5h44VYJZAj3PGaxwRdgi9eRa1Lg&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-ux80rHzXWWXkwNnb56nIX3g1HvlD1RKiSdLEvjUyoH8zsrwKvhJz6BOHAxTlYOFiIj-jB7ZBAvl_BZKmOLY3uHUVNL3OTGGKjkexmBlTXDEFZZTdVvfZsinkf9kUJvr8plfkFA_xo1GAyWPRPoxjTHmhTzIK6WD1AwwF8qH0DUXTrGI4pZy_d-DKBTIIwb6-Nex4ZaFhw58-73-0iSGVEbat0OsTt1sWDASeJPrzBtQWmR6w85YsnMpQSvDBoSTwdfyCI4NILy-Y9biocBN66exc93-qBJTDREpkSblRfo6A&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-tbh5LuXUNVIUqqn8HwQ6Sga9x4lpjeEmJPkAQ8UcWDEQQbQWpw9l-Bt-LCl6_ibV5yBlpInMCsBaOn7MHy1qg0bKcy8R1Uk2RVBflpW68fq3qazHLPwHtUqMBZihJTvCmQCOXwR8ICUomuc6S3LFiX9hKPWWvuBt9cNtS3vhnFDHUmGmfTGcpWqltndjW2TRbn1IUiEalDLeW6hz2biixnd_bnjs0Dee33mGQ0jg-91F-Hu-uXIzbQ1ixCL9i8Fl9cb10JcG5oaM4T-xMorq_UKFwIbl19pqvEaDNV1j9Q6Q&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
+    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-vOVCXctOqgzpMa4NwSUT4oYalYqPLImV1eagShq8VBVYWrKNU9nF3dEZsj_Wrhk1fCiEnDH-zZNO5L86qXH1j6acvFLbh5fQV6W8be1fvUYRBrE45_zSAI89nK66H7nwxWc8tAHt5iJ_s1De7736cHXfXsvXIXBxzChkYplwxXhnc8GsRUy1UTbF9N5j81VAmgYBcRxVvnn4ybv1oYrOHiATDBwSqyhr6uIOl14antPt2AMwh1bGWB9CXLjXSuAbM04_9wf_DlbOK1_lgr97bJlmUbMUdYyoFo_Bdd6XOKPg&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-tPirPlZNSCE0tvEs46s8fzQ4EtaPLvxX2ie5KHwdIdaxt6XMpGK8-p03mJBA_XBOWNMHPAAEhdKV10t5x-878uIpLoPahbdo6b880HX8YprTJuEge1UFCGqRJt_YbHFm6wgoQM9qsQNLtx1YxEOZN7nUcdOQnJrFXQUsUg3yg7YfYk1uI-CbrVmnHLPrvSOEbsZCPUsbUDwIzVbhZaMPACCzV-FAvuxTMQX2miZD0yKrKUx3S6F5HvFcTvyc2dGCbpEE9QVeu75E4tP-TcGLVEkXlgdim1S1ZSR4pb0UIZow&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-ujpcVcYcOX_pdcw97r4FqTINqPyuYXJGj-xiEByofezIu-W_vGI0plbfClOebQlSY1cdiVygshup4lwY6GW0TEhFrwfBWKgTK3v0Gks_EcMcrNrykXLcrrdn8JnjVp5bhfEZnq5DWnVuplTZXmN15uXuxhf7oaDhfsK7UfEz484vlrjQhldznhpHiaGMsPOFQyS3uHHhppFvwlsoI18P8HLdwi7Jd5xgOuIg6gv7sdUBmYOUAoXc8fDhfhRqob3_bstRYyk8FZMpvanGZGikS82CrPt4IbDAl_1CTkgaI3cQ&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-ua9MJvG4z0YJFye26cVhgvGLiH7ACOumwFfl05-rl_oSc62yH6s_lyl7d9c9RZgXsRRkP19KVE3iSo-OgX6D_34RI9wQm1cj7zG-K1C2sdePQ_jdP1n8ZL6OxTIF6gspTaTa2bVKstKgT1tArq7jbp9ba_Csugke9aPbhMSbph0G-d1SlOzjto9cV_YtICXQmx4n49hnLDacgG2q8yFm7K5cUKLn3rrm6lkYa-FdB06Up1JXv61gDNsCih3TH6T0R7Fn7M9_R8awSMk11Et0qKQJHNizqn9Ckknm3eCgT_wA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
   </div>
 </section>
 
@@ -282,16 +284,19 @@ Grazie Paola per la sua professionalità.</p>
       <div class="contact-card"><div class="contact-icon">📞</div><div class="contact-label">Telefono</div><div class="contact-value"><a href="tel:+39 380 152 1536">+39 380 152 1536</a></div></div>
       <div class="contact-card"><div class="contact-icon">📍</div><div class="contact-label">Indirizzo</div><div class="contact-value">Via Vittorio Veneto,  10/D, 40131 Bologna</div></div>
       <div class="contact-card"><div class="contact-icon">🏛</div><div class="contact-label">Specializzazione</div><div class="contact-value">Ufficio patenti</div></div>
+      <div class="contact-card" style="text-align:left">
+  <div class="contact-icon" style="text-align:center">🕐</div>
+  <div class="contact-label" style="text-align:center;margin-bottom:12px">Orari</div>
+  <table style="font-size:13px;width:100%"><tr><td style="padding:5px 16px 5px 0;">Lunedì</td><td style="color:rgba(255,255,255,0.8);">09–13 / 14:30–18:30</td></tr><tr><td style="padding:5px 16px 5px 0;font-weight:700;color:var(--gold)">Martedì</td><td style="color:#fff;font-weight:700;color:var(--gold)">09–13 / 14:30–18:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Mercoledì</td><td style="color:rgba(255,255,255,0.8);">09–13 / 14:30–18:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Giovedì</td><td style="color:rgba(255,255,255,0.8);">09–13 / 14:30–18:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Venerdì</td><td style="color:rgba(255,255,255,0.8);">09–13 / 14:30–18:30</td></tr><tr><td style="padding:5px 16px 5px 0;">Sabato</td><td style="color:rgba(255,255,255,0.8);">09–13</td></tr><tr><td style="padding:5px 16px 5px 0;">Domenica</td><td style="color:#e53e3e;">Chiuso</td></tr></table>
+</div>
     </div>
   </div>
 </section>
 
-<div class="banner">
-  <div class="container">
-    <h2>Vuoi un sito come questo per il tuo studio?</h2>
-    <p>Simplo crea siti web professionali in 24 ore per studi legali, notai e professionisti.</p>
-    <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" class="btn-primary">Scopri Simplo →</a>
-  </div>
+<div id="buy-banner">
+  <p class="dt">Ti piace questo sito? Il tuo potrebbe essere identico — online in 5 giorni per €99</p>
+  <p class="mob">Vuoi un sito così? €99</p>
+  <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" target="_blank" class="stripe">Inizia ora →</a>
 </div>
 
 <footer>
